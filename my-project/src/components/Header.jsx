@@ -1,4 +1,5 @@
 import React from 'react'
+import 'boxicons/css/boxicons.min.css' 
 
 const Header = () => {
   return (
@@ -11,7 +12,23 @@ const Header = () => {
         <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href=""> Company</a>
         <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href=""> Company</a>
         <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href=""> Company</a>
+        
       </nav>
+      <button className='hidden md:block bg-[#a7a7a7] text-black py-3 px-8 rounded-full border-none font-medium transition-all duration-500 hover:bg-white cursor-pointer z-50'>
+            Sign-In
+        </button>
+
+      <button className='md:hidden text-3xl z-50'>
+       <i class='bx bx-menu'></i>
+      </button>
+      <div id='mobileMenu' className=' hidden fixed top-16 bottom-0 right-0 left-0 p-5 md:hidden z-50 bg-black bg-opacity-70'>
+        <nav className=' flex flex-col gap-6 items-center'>
+            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href=""> Company</a>
+        <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href=""> Company</a>
+        <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href=""> Company</a>
+        <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href=""> Company</a>
+        </nav>
+      </div>
    </header>
   )
 }
