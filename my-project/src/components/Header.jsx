@@ -2,6 +2,16 @@ import React from 'react'
 import 'boxicons/css/boxicons.min.css' 
 
 const Header = () => {
+    //function to toggle mobile menu
+    const toggleMobileMenu=()=>{
+      const mobileMenu=document.getElementById('mobileMenu')
+      if(mobileMenu.classList.contains('hidden')){
+         mobileMenu.classList.remove('hidden');
+      }
+      else{
+          mobileMenu.classList.add('hidden');
+      }
+    }
   return (
    <header className="flex justify-between items-center py-4 px-4 lg:px-20">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font light m-0">
@@ -18,7 +28,7 @@ const Header = () => {
             Sign-In
         </button>
 
-      <button className='md:hidden text-3xl z-50'>
+      <button onClick={toggleMobileMenu} className='md:hidden text-3xl z-50'>
        <i class='bx bx-menu'></i>
       </button>
       <div id='mobileMenu' className=' hidden fixed top-16 bottom-0 right-0 left-0 p-5 md:hidden z-50 bg-black bg-opacity-70'>
