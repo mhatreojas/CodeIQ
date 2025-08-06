@@ -2,6 +2,10 @@ import React from 'react'
 import 'boxicons/css/boxicons.min.css' 
 
 const Header = () => {
+
+   const visitWebsite = () => {
+    window.location.href = "https://code-iq-chat.vercel.app/";
+  };
     //function to toggle mobile menu
     const toggleMobileMenu=()=>{
       const mobileMenu=document.getElementById('mobileMenu')
@@ -32,8 +36,9 @@ const Header = () => {
      data-aos-duration="2500" className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href=""> Company</a>
         
       </nav>
-      <button className='hidden md:block bg-[#a7a7a7] text-black py-3 px-8 rounded-full border-none font-medium transition-all duration-500 hover:bg-white cursor-pointer z-50'>
-            Sign-In
+      
+      <button onClick={visitWebsite} className='hidden md:block bg-[#a7a7a7] text-black py-3 px-8 rounded-full border-none font-medium transition-all duration-500 hover:bg-white cursor-pointer z-50'>
+            Get Started
         </button>
 
       <button onClick={toggleMobileMenu} className='md:hidden text-3xl z-50'>
